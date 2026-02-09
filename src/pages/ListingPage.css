@@ -1,0 +1,88 @@
+.listing-page {
+    background-color: var(--bg-dark);
+    min-height: 100vh;
+}
+
+.listing-header-section {
+    padding: 8rem 0 3rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.listing-header-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.listing-header-section p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+.listing-layout {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+.listing-content-area {
+    flex: 1;
+}
+
+.mobile-filter-btn {
+    display: none;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.results-count {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.pagination button {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    background: var(--bg-card);
+    transition: all 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.pagination button.active {
+    background: var(--primary);
+    color: black;
+    border-color: var(--primary);
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+    .mobile-filter-btn {
+        display: flex;
+    }
+}
