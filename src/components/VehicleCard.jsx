@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Fuel, Gauge, Users, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './VehicleCard.css';
 
 const VehicleCard = ({ vehicle }) => {
@@ -36,12 +37,12 @@ const VehicleCard = ({ vehicle }) => {
 
                 <div className="listing-footer">
                     <div className="owner-info">
-                        <img src="https://i. Pravatar.cc/100" alt="Owner" className="owner-avatar" />
+                        <img src="https://i.pravatar.cc/100" alt="Owner" className="owner-avatar" />
                         <span>RideX Fleet</span>
                     </div>
-                    <button className="btn btn-outline btn-sm">
+                    <Link to={`/vehicles/${vehicle.id}`} className="btn btn-outline btn-sm">
                         Details <ArrowRight size={16} />
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

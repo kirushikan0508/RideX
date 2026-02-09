@@ -25,6 +25,7 @@ const Footer = () => {
                             <li><a href="#categories">Categories</a></li>
                             <li><a href="#featured">Fleet</a></li>
                             <li><a href="#reviews">Reviews</a></li>
+                            <li><a href="/admin" style={{ color: '#ffc107' }}>Admin</a></li>
                         </ul>
                     </div>
 

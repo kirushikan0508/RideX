@@ -1,0 +1,33 @@
+.dashboard-page {
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-layout {
+    display: flex;
+    margin-top: 80px;
+    /* Navbar height */
+    height: calc(100vh - 80px);
+}
+
+.dashboard-main {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 900px) {
+    .dashboard-layout {
+        flex-direction: column;
+        height: auto;
+        min-height: calc(100vh - 80px);
+    }
+
+    .dashboard-main {
+        flex: 1;
+        overflow: visible;
+    }
+}

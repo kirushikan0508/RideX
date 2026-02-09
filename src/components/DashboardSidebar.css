@@ -1,0 +1,120 @@
+.dashboard-sidebar {
+    width: 280px;
+    background: var(--bg-card);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 0;
+}
+
+.user-profile-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+}
+
+.user-avatar-lg {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    margin-bottom: 1rem;
+}
+
+.user-profile-summary h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.user-profile-summary span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.dashboard-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    background: none;
+    border: none;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: left;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.nav-item.active {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.sidebar-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-item.logout {
+    color: #ff4d4d;
+}
+
+.nav-item.logout:hover {
+    background: rgba(255, 77, 77, 0.1);
+    color: #ff4d4d;
+}
+
+@media (max-width: 900px) {
+    .dashboard-sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        align-items: center;
+    }
+
+    .user-profile-summary {
+        display: none;
+    }
+
+    .dashboard-nav {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.5rem;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .nav-item {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
