@@ -1,0 +1,112 @@
+.admin-sidebar {
+    width: 260px;
+    background: #1a1a1a;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+}
+
+.admin-header {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-header h3 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.admin-badge {
+    background: rgba(255, 215, 0, 0.1);
+    color: var(--primary);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.admin-nav {
+    flex: 1;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.admin-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    color: #a0a0a0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.admin-nav-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.admin-nav-item.active {
+    background: var(--primary);
+    color: black;
+    font-weight: 600;
+}
+
+.admin-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-nav-item.logout {
+    color: #ff6b6b;
+}
+
+.admin-nav-item.logout:hover {
+    background: rgba(255, 107, 107, 0.1);
+}
+
+@media (max-width: 900px) {
+    .admin-sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem;
+    }
+
+    .admin-header,
+    .admin-footer {
+        display: none;
+    }
+
+    .admin-nav {
+        flex-direction: row;
+        padding: 0;
+        overflow-x: auto;
+    }
+
+    .admin-nav-item {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}
